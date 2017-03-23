@@ -23,8 +23,11 @@ function ph_hasher(pin, salt) {
 function protohasher() {
   var pin_code_input = document.getElementById('pin-code-input');
   var pin = parseInt(pin_code_input.value);
+
+  var output = document.getElementById('output');
+
   var salt = 'ba10cEAB3dgf725DCFGh4eH6';
   var hashed_pin = ph_hasher(pin, salt);
 
-  alert(hashed_pin);
+  output.innerHTML = hashed_pin;
 }
